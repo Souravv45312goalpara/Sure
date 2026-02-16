@@ -1,1 +1,119 @@
-# Sure
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="line"><h1>Heyyy, are you </h1></div>
+    <div id="name"><h1>Aysha?</h1></div>
+    <!-- <div class="card"></div> -->
+    <div id="btn"><button>Yes</button></div>
+    <!-- <a href="sure.html"><div id="btn2"><button>No</button></div></a> -->
+   <div id="btn2" onclick="openSure()"><button>No</button></div> 
+</body>
+<style>
+    div#line {
+        text-align: center;
+    margin:-17px -344px 220px 137px;
+    color: #914f90;
+    }
+        div#name {
+            text-align: center;
+            margin: 51px -485px 207px 177px;
+            color: #914f90;
+        }
+    div#btn {
+        display: flex;
+        border: 1px solid pink;
+        /* background-color: rgb(143, 57, 71); */
+        margin-block-end: -150px;
+        margin-left: 20px;
+        margin: 18px 31px 23px 168px;
+    height: 40px;
+    width: 60px;    border-radius: 10px; padding: 0px 100px 0px 100px;
+    }
+     div#btn button {
+        background-color: rgb(49, 167, 100);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 5px 10px;
+    }
+     div#btn2 button {
+        background-color: rgb(98, 67, 175);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 9px 24px;
+    }   
+     div#btn2 {
+            height: 40px;
+        width: 60px;
+        display: flex;
+        border: 1px solid pink;
+        color: rgb(82, 65, 68);
+        margin-left: 20px;
+        margin: 10px 76px 16px 59px;
+        border-radius: 10px;
+    }
+    div.card {
+        height: 70px;
+        width: 60px;
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+    #main {
+        display: flex;
+        flex-wrap: wrap;
+        width: 500px;
+    }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: lightgreen;
+    }
+</style>
+<script>
+    let btn = document.getElementById("btn");
+    let btn2 = document.getElementById("btn2");
+    let line = document.getElementsByTagName("h1")[0];
+    let margin = "18px 31px 23px 168px";
+
+
+    btn.addEventListener("click", function() {
+        if (margin === "18px 31px 23px 168px") {
+            margin = "397px 31px 23px 168px";
+            btn.style.margin = margin;
+        }
+        else if (margin === "397px 31px 23px 168px") {
+            margin = "-69px 76px 343px 61px";
+            btn.style.margin = margin;
+        }
+        else if (margin === "-69px 76px 343px 61px") {
+            btn2.style.height ="120px";
+            margin = "18px 31px 23px 168px";
+            btn.style.margin = margin;
+        }
+        else {
+            margin = "18px 31px 23px 168px";
+            btn.style.margin = margin;
+        }
+    // btn2.addEventListener("click", function() {
+    //     window.open("C:\JAVA SCRIPT\DOM\sure.html");});
+    function openSure() {
+        window.open("C:\JAVA SCRIPT\DOM\sure.html");}
+});
+
+
+
+// NO button redirect
+document.getElementById("btn2").addEventListener("click", function(){
+    window.location.href = "sure.html";
+});
+
+</script>
+</html>
